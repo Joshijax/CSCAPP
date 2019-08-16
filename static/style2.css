@@ -1,0 +1,31 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.header {
+	height: 90vh;
+}
+.navbar-style{
+	box-shadow: 0 5px 10px #efefef;
+	background-color: #ffc107
+}
+.logo{
+	height: 30px;
+	padding: 2px 10px;
+}
+.icon-bar{
+	background: darkorange;
+}
+.logout{
+	background-color: #ed2939;
+	border-radius: 20px;
+}
+.img-d{
+	border-radius: 20px;
+}
+body{
+	
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
