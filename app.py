@@ -14,10 +14,10 @@ from flask_mail import Mail, Message
 
 app = Flask(__name__)
 mysql = MySQL()
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'register'
+app.config['MYSQL_HOST'] = 'ec2-54-83-33-14.compute-1.amazonaws.com'
+app.config['MYSQL_USER'] = 'rvermoyahohjob'
+app.config['MYSQL_PASSWORD'] = 'c3776ebb1f58fd1d76fbe9ebb386f257e63a76555b87a0e3a74ef0b8837d37c0'
+app.config['MYSQL_DB'] = 'd9e1m1h0oq3lkp'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
 # Initialize the app for use with this MySQL class
