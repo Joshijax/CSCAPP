@@ -4,12 +4,13 @@ from sqlalchemy import create_engine
 from wtforms import Form, StringField, TextAreaField, PasswordField, validators, SelectField
 from flask_mysqldb import MySQL
 from functools import wraps
-from flask_uploads import UploadSet, configure_uploads, IMAGES
+from flask_uploads import UploadSet, configure_uploads, IMAGES, patch_request_class
 from sqlalchemy.orm import scoped_session, sessionmaker
 from passlib.hash import sha256_crypt, pbkdf2_sha256
 import os
 from wtforms.fields.html5 import EmailField
 from flask_mail import Mail, Message
+
 
 
 app = Flask(__name__)
