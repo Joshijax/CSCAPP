@@ -10,16 +10,16 @@ from passlib.hash import sha256_crypt, pbkdf2_sha256
 import os
 from wtforms.fields.html5 import EmailField
 from flask_mail import Mail, Message
-
+import psycopg2
+from flask_sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
-mysql = MySQL()
-app.config['MYSQL_HOST'] = 'ec2-54-83-33-14.compute-1.amazonaws.com'
-app.config['MYSQL_USER'] = 'rvermoyahohjob'
-app.config['MYSQL_PASSWORD'] = 'c3776ebb1f58fd1d76fbe9ebb386f257e63a76555b87a0e3a74ef0b8837d37c0'
-app.config['MYSQL_DB'] = 'd9e1m1h0oq3lkp'
-app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
+mysql = SQLAlchemy(app)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://dwxxiixwimclsh:f6b47c911dfe932eae6c8af844e46ce0453163fdfcdd18a6a1170f77e21be035@ec2-54-235-86-101.compute-1.amazonaws.com:5432/d2si4i4gr4idrn'
+DATABASE_DEFAULT = 'postgresql://postgres:f6b47c911dfe932eae6c8af844e46ce0453163fdfcdd18a6a1170f77e21be035@ec2-54-235-86-101.compute-1.amazonaws.com:5432/register'
+
 
 # Initialize the app for use with this MySQL class
 mysql.init_app(app)
