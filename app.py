@@ -11,7 +11,7 @@ import os
 from wtforms.fields.html5 import EmailField
 from flask_mail import Mail, Message
 import psycopg2
-from flask_sqlalchemy import SQLAlchemy
+
 
 
 app = Flask(__name__)
